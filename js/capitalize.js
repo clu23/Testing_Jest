@@ -1,9 +1,12 @@
 function capitalize(string){
-    let s=string[0].toUpperCase()
-    for(let i=1;i<string.length;i++){
-        s+=string[i]
+    if (!string){
+        return("");
     }
-    return s;
+    else{
+        let s=string.substring(0,1).toUpperCase();
+        let remain=string.slice(1);
+        return (s+remain);
+    }
 };
 
 
